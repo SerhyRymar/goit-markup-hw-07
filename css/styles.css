@@ -58,50 +58,60 @@ img {
 	border-bottom: 1px solid #ececec;
 	justify-content: center;
 }
-.header-link {
-	margin-right: 93px;
+.navigation {
+	width: 1200px;
+	padding-right: 15px;
+	padding-left: 15px;
+	margin: 0 auto;
 }
-.header .container {
+
+.header .navigation {
 	display: flex;
 	align-items: center;
 }
 
-.header-logo {
+/* -логотип- */
+
+.header__logo {
 	display: flex;
 	align-items: center;
 }
-.logo-link {
+.logo__link {
+	margin-right: 93px;
+}
+
+.logo__container {
 	display: flex;
 }
-.header-list {
+.logo__text {
+	font-family: "Raleway", sans-serif;
+	font-weight: 700;
+	font-size: 26px;
+	line-height: 1.2;
+}
+
+.logo--accent-color {
+	color: var(--accent-color);
+}
+
+.logo--primary-color {
+	color: var(--primary-text-color);
+}
+
+/* Меню сайта */
+
+.menu {
 	display: flex;
 	align-items: center;
 	margin-right: 0;
 	padding-right: 0;
 }
 
-.header-list-item:not(:last-child) {
+.menu__item:not(:last-child) {
 	margin-right: 50px;
 }
 
-.logo-web {
-	font-family: "Raleway", sans-serif;
-	font-weight: 700;
-	font-size: 26px;
-	line-height: 1.2;
-	color: var(--accent-color);
-}
-
-.logo-studio {
-	font-family: "Raleway", sans-serif;
-	font-style: normal;
-	font-weight: 700;
-	font-size: 26px;
-	line-height: 1.2;
-	color: var(--primary-text-color);
-}
-
-.header-nav {
+.menu__nav {
 	position: relative;
 	padding-bottom: 32px;
 
@@ -113,13 +123,14 @@ img {
 
 	transition: color 250ms var(--timing-function);
 }
-.header-nav:hover,
-.header-nav:focus,
+
+.menu__nav:hover,
+.menu__nav:focus,
 .contact:hover,
 .contact:focus {
 	color: var(--accent-color);
 }
-.header-nav::after {
+.menu__nav::after {
 	content: " ";
 	position: absolute;
 	left: 0;
@@ -135,8 +146,8 @@ img {
 	transition: opacity 250ms var(--timing-function);
 	bottom: -1px;
 
-
 }
+
 .current-portfolio::after {
 	content: " ";
 	position: absolute;
@@ -154,7 +165,7 @@ img {
 	bottom: -1px;
 }
 
-.header-nav:hover::after {
+.menu__nav:hover::after {
 	opacity: 1;
 }
 
@@ -171,15 +182,8 @@ img {
 	left: 0;
 	opacity: 1;
 }
-.header-conect {
-	display: flex;
-	align-items: center;
-	margin-left: auto;
-}
 
-.header-conect-item:not(:last-child) {
-	margin-right: 50px;
-}
+/* Меню контактов */
 
 .contact {
 	font-weight: 500;
@@ -188,33 +192,36 @@ img {
 	letter-spacing: 0.02em;
 	color: var(--second-text-color);
 	margin-left: 10px;
-
 	display: flex;	
-	align-items: center;
+	justify-content: center;
 
 	transition: color 250ms var(--timing-function);
 }
+.contact__item {
+	display: flex;
+	justify-content: center;
+}
 
-.header-contact-mail {
-	width: 16px;
+.contact__link {
+	display: flex;
+	justify-content: center;
+
+}
+.contact__icon {
+	widht: 16px; 
 	height: 12px;
-	margin-right: 10px;
-	fill: currentColor;
+
+
+}
+.contact__item:not(:last-child) {
+	margin-right: 50px;
 }
 
-.header-contact-mail:hover,
-.header-contact-mail:focus {
-	fill: currentColor;
-}
-.header-contact-tel {
-	width: 10px;
-	height: 16px;
-	margin-right: 10px;
-	fill: currentColor;
-}
-.header-contact-tel:hover,
-.header-contact-tel:focus {
-	fill: currentColor;
+.contact__icon:hover,
+.contact__icon:focus,
+.contact__item:hover,
+.contact__item:focus {
+	fill: var(--accent-color);
 }
 /* --------------------------PAGE-STUDIO------------------------ */
 
