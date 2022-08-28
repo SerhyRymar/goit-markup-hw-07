@@ -5,10 +5,10 @@
 }
 .features__item {
 	max-width: 270px;
-}
-.features__item:not(:last-child) {
-	margin-right: 30px;
-	max-width: 270px;
+	&:not(:last-child) {
+		margin-right: 30px;
+		max-width: 270px;
+	}
 }
 .features__container {
 	width: 270px;
@@ -56,9 +56,9 @@
 .product__item {
 	margin-right: 30px;
 	position: relative;
-}
-.product__item:nth-child(3n) {
-	margin-right: 0;
+	&:nth-child(3n) {
+		margin-right: 0;
+	}
 }
 
 .product__text {

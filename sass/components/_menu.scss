@@ -42,6 +42,9 @@
 	opacity: 0;
 	transition: opacity 250ms var(--timing-function);
 	bottom: -1px;
+	&:hover::after {
+		opacity: 1;
+	}
 }
 
 .current-portfolio::after {
@@ -59,10 +62,6 @@
 	opacity: 0;
 	transition: opacity 250ms var(--timing-function);
 	bottom: -1px;
-}
-
-.menu__nav:hover::after {
-	opacity: 1;
 }
 
 .current::after {
@@ -102,6 +101,9 @@
 }
 .contact__item {
 	display: flex;
+	&:not(:last-child) {
+		margin-right: 50px;
+	}
 }
 
 .contact__link {
@@ -132,8 +134,4 @@
 	&:focus {
 		fill: currentColor;
 	}
-}
-
-.contact__item:not(:last-child) {
-	margin-right: 50px;
 }

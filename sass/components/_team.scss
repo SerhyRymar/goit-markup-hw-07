@@ -61,17 +61,18 @@
 	justify-content: center;
 
 	transition: background-color 250ms var(--timing-function);
+	&:hover,
+	&:focus {
+		background-color: var(--accent-color);
+	}
 }
-.social-list__link:hover,
-.social-list__link:focus {
-	background-color: var(--accent-color);
-}
+
 .social-list__icon {
 	fill: var(--primary-icon-color);
 
 	transition: fill 250ms var(--timing-function);
-}
-.social-list__link:hover .social-list__icon,
-.social-list__link:focus .social-list__icon {
-	fill: var(--primary-white-color);
+	.social-list__link:hover &,
+	.social-list__link:focus & {
+		fill: var(--primary-white-color);
+	}
 }
