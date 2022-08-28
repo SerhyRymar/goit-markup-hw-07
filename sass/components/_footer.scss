@@ -67,7 +67,7 @@
 	transition: background-color 250ms var(--timing-function);
 	&:hover,
     &:focus {
-	background-color: var(--accent-color);
+	background-color: var(--accent-color);}
 }
 
 .footer-social__icon {

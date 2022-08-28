@@ -154,37 +154,29 @@ img {
   transition: opacity 250ms var(--timing-function);
   bottom: -1px;
 }
-
-.current-portfolio::after {
-  content: " ";
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  display: block;
-  width: 100%;
-  height: 4px;
-  background-color: var(--accent-color);
-  border-radius: 2px;
-  opacity: 0;
-  transition: opacity 250ms var(--timing-function);
-  bottom: -1px;
+.menu__nav::after:hover::after {
+  opacity: 1;
 }
 
 .menu__nav:hover::after {
   opacity: 1;
 }
 
-.current::after {
+.menu__nav--current::after {
   content: " ";
-  position: absolute;
   display: block;
+  position: absolute;
+  left: 0;
   width: 100%;
   height: 4px;
+  bottom: -1px;
   background-color: var(--accent-color);
   border-radius: 2px;
-  bottom: -1px;
-  left: 0;
   opacity: 1;
+  transition: opacity 250ms var(--timing-function);
+}
+.menu__nav--current::after:hover::after {
+  opacity: 0;
 }
 
 /* Меню контактов */
@@ -206,6 +198,9 @@ img {
 
 .contact__item {
   display: flex;
+}
+.contact__item:not(:last-child) {
+  margin-right: 50px;
 }
 
 .contact__link {
@@ -233,10 +228,6 @@ img {
 }
 .contact__tel:hover, .contact__tel:focus {
   fill: currentColor;
-}
-
-.contact__item:not(:last-child) {
-  margin-right: 50px;
 }
 
 /* Секция постер-герой */
@@ -285,9 +276,7 @@ img {
   margin-right: auto;
   transition: backgroud-color 250ms var(--timing-function);
 }
-
-.hero__button:focus,
-.hero__button:hover {
+.hero__button:focus, .hero__button:hover {
   background: #188ce8;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
@@ -316,7 +305,6 @@ img {
 .features__item {
   max-width: 270px;
 }
-
 .features__item:not(:last-child) {
   margin-right: 30px;
   max-width: 270px;
@@ -370,7 +358,6 @@ img {
   margin-right: 30px;
   position: relative;
 }
-
 .product__item:nth-child(3n) {
   margin-right: 0;
 }
@@ -456,9 +443,7 @@ img {
   justify-content: center;
   transition: background-color 250ms var(--timing-function);
 }
-
-.social-list__link:hover,
-.social-list__link:focus {
+.social-list__link:hover, .social-list__link:focus {
   background-color: var(--accent-color);
 }
 
@@ -466,9 +451,7 @@ img {
   fill: var(--primary-icon-color);
   transition: fill 250ms var(--timing-function);
 }
-
-.social-list__link:hover .social-list__icon,
-.social-list__link:focus .social-list__icon {
+.social-list__link:hover .social-list__icon, .social-list__link:focus .social-list__icon {
   fill: var(--primary-white-color);
 }
 
@@ -500,9 +483,7 @@ img {
   border: 1px solid var(--primary-icon-color);
   transition: border 250ms var(--timing-function), color 250ms var(--timing-function);
 }
-
-.clients__link:hover,
-.clients__link:focus {
+.clients__link:hover, .clients__link:focus {
   color: var(--accent-color);
   border: 1px solid var(--accent-color);
 }
@@ -588,9 +569,7 @@ img {
   justify-content: center;
   transition: background-color 250ms var(--timing-function);
 }
-
-.footer-social__link:hover,
-.footer-social__link:focus {
+.footer-social__link:hover, .footer-social__link:focus {
   background-color: var(--accent-color);
 }
 
@@ -629,6 +608,9 @@ img {
   border-radius: 4px;
   background-color: #2f303a;
 }
+.subscription__input:focus, .subscription__input:hover {
+  border-color: 1px solid rgba(255, 255, 255, 0.3);
+}
 
 .subscription__input:focus,
 .subscription__input:hover {
@@ -665,19 +647,19 @@ img {
 
 /* --------------------------PAGE-PORTFOLIO------------------------ */
 /* ----------------Секция управления----------------- */
-.button__box {
+.button-box {
   display: flex;
   margin-bottom: 50px;
 }
 
-.button__list {
+.button-box__list {
   display: flex;
   margin-left: auto;
   margin-right: auto;
   gap: 8px;
 }
 
-.button__item {
+.button-box__item {
   font-weight: 500;
   font-size: 16px;
   line-height: 1.6;
@@ -690,9 +672,7 @@ img {
   border-radius: 4px;
   transition: color 250ms var(--timing-function), background-color 250ms var(--timing-function), box-shadow 250ms var(--timing-function);
 }
-
-.button__item:hover,
-.button__item:focus {
+.button-box__item:hover, .button-box__item:focus {
   font-weight: 500;
   font-size: 16px;
   line-height: 1.6;
@@ -701,60 +681,38 @@ img {
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
-/* ---------------Секция Наши Проекты----------------- */
-.progect {
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 2;
-  color: var(--primary-text-color);
-  letter-spacing: 0.06em;
-}
-
-.conteiner-progect {
-  padding-top: 20px;
-  padding-left: 24px;
-  padding-right: 24px;
-  padding-bottom: 20px;
-  border-left: 1px solid #eeeeee;
-  border-right: 1px solid #eeeeee;
-  border-bottom: 1px solid #eeeeee;
-}
-
-.progect-desc {
-  font-size: 16px;
-  line-height: 1.9;
-  color: var(--second-text-color);
-  margin-top: 4px;
-}
-
-.progect-list {
+/* ---------------Секция Примеры работ----------------- */
+.example-list {
   display: flex;
   flex-wrap: wrap;
   gap: 30px;
 }
 
-.progect-list-item {
+.example-list__item {
   width: 370px;
   height: 404px;
 }
 
-.progect-list-link {
+.example-list__link {
   display: inline-block;
 }
-
-.progect-list-link:hover,
-.progect-list-link:focus {
+.example-list__link:hover, .example-list__link:focus {
   background: #ffffff;
   border: 1px solid #eeeeee;
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(37, 17, 17, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
-.progect-cover-container {
+.example-list__link:hover .progect,
+.example-list__link:focus .progect {
+  transform: translateY(0%);
+}
+
+.example-list__container {
   position: relative;
   overflow: hidden;
 }
 
-.progect-container-text {
+.progect {
   position: absolute;
   top: 0;
   left: 0;
@@ -765,7 +723,7 @@ img {
   transition: transform 250ms linear;
 }
 
-.progect-cover-text {
+.progect__text {
   font-weight: 400;
   font-size: 18px;
   line-height: 1.56;
@@ -773,9 +731,29 @@ img {
   color: var(--primary-white-color);
 }
 
-.progect-list-link:hover .progect-container-text,
-.progect-list-link:focus .progect-container-text {
-  transform: translateY(0%);
+.progect__conteiner {
+  padding-top: 20px;
+  padding-left: 24px;
+  padding-right: 24px;
+  padding-bottom: 20px;
+  border-left: 1px solid #eeeeee;
+  border-right: 1px solid #eeeeee;
+  border-bottom: 1px solid #eeeeee;
+}
+
+.progect__title {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 2;
+  color: var(--primary-text-color);
+  letter-spacing: 0.06em;
+}
+
+.progect__subtitle {
+  font-size: 16px;
+  line-height: 1.9;
+  color: var(--second-text-color);
+  margin-top: 4px;
 }
 
 /* --------------------------МОДАЛЬНЕ-ВІКНО------------------------- */
